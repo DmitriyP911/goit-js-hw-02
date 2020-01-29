@@ -2,7 +2,7 @@
 
 let input;
 const numbers = [];
-let total = 1;
+let total = 0;
 do {
     input = prompt( `Введите число: ` )
     if( input !== null ) {
