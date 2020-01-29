@@ -2,13 +2,7 @@
 
 const formatString = function ( string ) {
     const array = string.split( `` );
-    if( array.length < 40 ) {
-        return string;
-    }
-    else {
-        array.length = 40;
-        return array.join( `` );
-    }
+    return array.length < 40 ? string : array.length = 40, array.join( `` );
 };
 
 console.log( formatString( 'Curabitur ligula sapien, tincidunt non.' ) );

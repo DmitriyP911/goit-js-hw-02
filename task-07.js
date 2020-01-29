@@ -13,12 +13,9 @@ const isLoginUnique = function ( allLogins, login ) {
 const addLogin = function ( allLogins, login ) {
   if( isLoginValid( login ) === false ) {
     return 'Ошибка! Логин должен быть от 4 до 16 символов';
-  } else if( isLoginUnique( allLogins, login ) === true ) {
-    return `Такой логин уже используется!`;
-  } else if( isLoginUnique( allLogins, login ) === false && isLoginValid( login ) === true ) {
-    logins.push( login );
-    return `Логин успешно добавлен`;
   }
+  if( isLoginUnique( allLogins, login ) === true ) return `Такой логин уже используется!`;
+  return `Логин успешно добавлен`;
 };
 
 console.log( addLogin( logins, 'Ajax' ) ); // 'Логин успешно добавлен!'

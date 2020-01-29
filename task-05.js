@@ -1,18 +1,9 @@
 `use strict`
 
 const checkForSpam = function ( message ) {
-    const firstWrongWord = `spam`;
-    const secondWrongWord = `sale`;
-    const array = message.split( /\b/ );
-    for( let i = 0; i < array.length; i++ ) {
-        let wrongWord = array[i].toLowerCase();
-        if( wrongWord === firstWrongWord || wrongWord === secondWrongWord ) {
-            return true;
-        }
-    }
-    return false;
-};
-
+    let array = message.toString().toLowerCase();
+    return array.includes( `spam` ) || array.includes( `sale` );
+}
 console.log( checkForSpam( 'Latest technology news' ) ); // false
 
 console.log( checkForSpam( 'JavaScript weekly newsletter' ) ); // false

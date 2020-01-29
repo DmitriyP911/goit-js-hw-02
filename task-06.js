@@ -13,7 +13,7 @@ do {
         numbers.push( +input );
     }
 } while( input !== null );
-if( numbers.length !== 0 ) {
+if( numbers.length ) {
     for( let num of numbers ) {
         total += num;
     }
